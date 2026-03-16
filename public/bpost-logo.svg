@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <path d="M15 45 C5 35, 8 15, 25 12 C35 10, 38 18, 30 25 C22 32, 18 28, 22 22" stroke="#ef2636" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M22 22 C30 10, 50 5, 55 8" stroke="#ef2636" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="65" y="42" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#6d6e71">bpost</text>
+</svg>
