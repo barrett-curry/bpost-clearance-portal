@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Portal de Despacho Royal Mail",
+    "appName": "Portal de Despacho bpost",
     "search": "Buscar",
     "save": "Guardar",
     "cancel": "Cancelar",
@@ -28,7 +28,7 @@
     "signIn": "Iniciar Sesión",
     "signOut": "Cerrar Sesión",
     "language": "Idioma",
-    "poweredBy": "Impulsado por Royal Mail Group"
+    "poweredBy": "Impulsado por bpost Group"
   },
   "nav": {
     "dashboard": "Panel",
@@ -96,7 +96,7 @@
     "customer": "Cliente",
     "destination": "Destino",
     "clearanceReady": "Listo para Despacho",
-    "shipWithFedex": "Enviar con Royal Mail",
+    "shipWithFedex": "Enviar con bpost",
     "orderDetail": "Detalle del Pedido",
     "landedCostBreakdown": "Desglose de Costo de Destino"
   },
@@ -220,7 +220,7 @@
   "profile": {
     "title": "Perfil Empresarial",
     "companyInfo": "Información de la Empresa",
-    "fedexAccounts": "Números de Cuenta Royal Mail",
+    "fedexAccounts": "Números de Cuenta bpost",
     "taxIds": "IDs Fiscales por País",
     "shippingPreferences": "Preferencias de Envío Predeterminadas",
     "brokerAssignment": "Asignación de Agente Aduanal",
@@ -237,18 +237,18 @@
     "recommendations": "Recomendaciones IA"
   },
   "onboarding": {
-    "title": "Bienvenido al Portal de Despacho Royal Mail",
+    "title": "Bienvenido al Portal de Despacho bpost",
     "step1Title": "Cree su Cuenta",
     "step1Subtitle": "Ingrese su correo electrónico y cree una contraseña",
-    "step2Title": "Valide su Cuenta Royal Mail",
-    "step2Subtitle": "Ingrese su número de cuenta Royal Mail para vincular sus datos de envío",
+    "step2Title": "Valide su Cuenta bpost",
+    "step2Subtitle": "Ingrese su número de cuenta bpost para vincular sus datos de envío",
     "step3Title": "Perfil Empresarial",
     "step3Subtitle": "Cuéntenos sobre su negocio para un despacho aduanero más rápido",
     "step4Title": "¡Todo Listo!",
     "step4Subtitle": "Gestione todos sus envíos internacionales en un solo lugar",
     "email": "Correo Electrónico",
     "password": "Contraseña",
-    "fedexAccount": "Número de Cuenta Royal Mail",
+    "fedexAccount": "Número de Cuenta bpost",
     "accountValidated": "Cuenta validada exitosamente",
     "companyName": "Nombre de la Empresa",
     "taxId": "ID Fiscal (EIN)",
@@ -263,7 +263,7 @@
     "title": "Iniciar sesión en el Portal de Despacho",
     "email": "Correo electrónico",
     "password": "Contraseña",
-    "signInFedex": "Iniciar sesión con ID Royal Mail",
+    "signInFedex": "Iniciar sesión con ID bpost",
     "forgotPassword": "¿Olvidó su contraseña?",
     "noAccount": "¿No tiene una cuenta?",
     "createAccount": "Crear cuenta"

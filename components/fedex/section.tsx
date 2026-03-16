@@ -4,7 +4,7 @@ import { useState } from "react"
 import { CheckCircle2, ChevronDown, ChevronUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-interface RoyalMailSectionProps {
+interface BPostSectionProps {
   title: string
   complete?: boolean
   defaultOpen?: boolean
@@ -15,7 +15,7 @@ interface RoyalMailSectionProps {
   variant?: "collapsible" | "static"
 }
 
-export function RoyalMailSection({
+export function BPostSection({
   title,
   complete = false,
   defaultOpen = true,
@@ -24,7 +24,7 @@ export function RoyalMailSection({
   icon,
   action,
   variant = "collapsible",
-}: RoyalMailSectionProps) {
+}: BPostSectionProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   const statusIcon = icon ?? (
@@ -92,4 +92,4 @@ export function RoyalMailSection({
 }
 
 // Backward-compatible aliases
-export const FedExSection = RoyalMailSection;
+export const FedExSection = BPostSection;

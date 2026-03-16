@@ -32,19 +32,19 @@ import {
 } from "recharts";
 
 const dapShipments = [
-  { id: "DAP-001", shipmentId: "BP-2024-00860", originPost: "USPS", originCountry: "US", recipient: "J. Smith, London SE1", description: "Electronics Bundle", declaredValue: "$450", totalDAP: "€144.00", status: "payment-pending", notified: true, paymentDue: "2024-03-15" },
-  { id: "DAP-002", shipmentId: "BP-2024-00861", originPost: "USPS", originCountry: "US", recipient: "A. Brown, Manchester M1", description: "Designer Clothing", declaredValue: "$280", totalDAP: "€89.60", status: "paid", notified: true, paymentDue: "2024-03-14" },
-  { id: "DAP-003", shipmentId: "BP-2024-00862", originPost: "Deutsche Post", originCountry: "DE", recipient: "C. Williams, Bristol BS1", description: "Auto Parts Set", declaredValue: "€620", totalDAP: "€106.40", status: "payment-pending", notified: true, paymentDue: "2024-03-16" },
-  { id: "DAP-004", shipmentId: "BP-2024-00863", originPost: "USPS", originCountry: "US", recipient: "M. Taylor, Leeds LS1", description: "Cosmetics Package", declaredValue: "$95", totalDAP: "€30.40", status: "paid", notified: true, paymentDue: "2024-03-13" },
-  { id: "DAP-005", shipmentId: "BP-2024-00864", originPost: "La Poste", originCountry: "FR", recipient: "R. Davies, Cardiff CF1", description: "Kids Clothing Bundle", declaredValue: "€380", totalDAP: "€65.20", status: "overdue", notified: true, paymentDue: "2024-03-10" },
-  { id: "DAP-006", shipmentId: "BP-2024-00865", originPost: "USPS", originCountry: "US", recipient: "S. Wilson, Edinburgh EH1", description: "Sporting Equipment", declaredValue: "$750", totalDAP: "€165.00", status: "returned", notified: true, paymentDue: "2024-03-08" },
-  { id: "DAP-007", shipmentId: "BP-2024-00866", originPost: "China Post", originCountry: "CN", recipient: "P. Evans, Birmingham B1", description: "Electronics Accessories", declaredValue: "¥580", totalDAP: "€22.80", status: "paid", notified: true, paymentDue: "2024-03-12" },
-  { id: "DAP-008", shipmentId: "BP-2024-00867", originPost: "Japan Post", originCountry: "JP", recipient: "K. Hughes, Glasgow G1", description: "Collectible Figures", declaredValue: "¥12,500", totalDAP: "€48.60", status: "payment-pending", notified: false, paymentDue: "2024-03-17" },
+  { id: "DAP-001", shipmentId: "BP-2024-00860", originPost: "USPS", originCountry: "US", recipient: "J. Janssens, Brussels 1000", description: "Electronics Bundle", declaredValue: "$450", totalDAP: "€144.00", status: "payment-pending", notified: true, paymentDue: "2024-03-15" },
+  { id: "DAP-002", shipmentId: "BP-2024-00861", originPost: "USPS", originCountry: "US", recipient: "A. Peeters, Antwerp 2000", description: "Designer Clothing", declaredValue: "$280", totalDAP: "€89.60", status: "paid", notified: true, paymentDue: "2024-03-14" },
+  { id: "DAP-003", shipmentId: "BP-2024-00862", originPost: "Deutsche Post", originCountry: "DE", recipient: "C. Willems, Ghent 9000", description: "Auto Parts Set", declaredValue: "€620", totalDAP: "€106.40", status: "payment-pending", notified: true, paymentDue: "2024-03-16" },
+  { id: "DAP-004", shipmentId: "BP-2024-00863", originPost: "USPS", originCountry: "US", recipient: "M. Maes, Leuven 3000", description: "Cosmetics Package", declaredValue: "$95", totalDAP: "€30.40", status: "paid", notified: true, paymentDue: "2024-03-13" },
+  { id: "DAP-005", shipmentId: "BP-2024-00864", originPost: "La Poste", originCountry: "FR", recipient: "R. Dubois, Namur 5000", description: "Kids Clothing Bundle", declaredValue: "€380", totalDAP: "€65.20", status: "overdue", notified: true, paymentDue: "2024-03-10" },
+  { id: "DAP-006", shipmentId: "BP-2024-00865", originPost: "USPS", originCountry: "US", recipient: "S. Wouters, Bruges 8000", description: "Sporting Equipment", declaredValue: "$750", totalDAP: "€165.00", status: "returned", notified: true, paymentDue: "2024-03-08" },
+  { id: "DAP-007", shipmentId: "BP-2024-00866", originPost: "China Post", originCountry: "CN", recipient: "P. Claes, Liege 4000", description: "Electronics Accessories", declaredValue: "¥580", totalDAP: "€22.80", status: "paid", notified: true, paymentDue: "2024-03-12" },
+  { id: "DAP-008", shipmentId: "BP-2024-00867", originPost: "Japan Post", originCountry: "JP", recipient: "K. Hermans, Charleroi 6000", description: "Collectible Figures", declaredValue: "¥12,500", totalDAP: "€48.60", status: "payment-pending", notified: false, paymentDue: "2024-03-17" },
 ];
 
 const dapKPIs = [
   { label: "Inbound DAP Parcels Today", value: "1,842", icon: Package, sub: "Across all origin countries" },
-  { label: "Total Duties Collected", value: "€128,450", icon: Banknote, sub: "From UK consumers today" },
+  { label: "Total Duties Collected", value: "€128,450", icon: Banknote, sub: "From Belgian consumers today" },
   { label: "Payment Success Rate", value: "87.3%", icon: CheckCircle2, sub: "Of notified recipients" },
   { label: "Avg Time to Payment", value: "1.8 days", icon: Clock, sub: "From notification to payment" },
 ];
@@ -73,7 +73,7 @@ const dailyCollections = [
 const notificationStatus = [
   { channel: "Email Notification", sent: 1842, delivered: 1798, opened: 1423, paymentClicked: 1108, rate: "97.6%" },
   { channel: "SMS Notification", sent: 1842, delivered: 1810, opened: 1650, paymentClicked: 1285, rate: "98.3%" },
-  { channel: "RM App Push", sent: 892, delivered: 876, opened: 741, paymentClicked: 623, rate: "98.2%" },
+  { channel: "bpostApp Push", sent: 892, delivered: 876, opened: 741, paymentClicked: 623, rate: "98.2%" },
 ];
 
 const lanePerformance = [
@@ -90,7 +90,7 @@ export default function DAPPage() {
     <div className="space-y-6">
       <PageHeader
         title="DAP Import Operations"
-        description="DUTY & TAX COLLECTION FOR INBOUND UK PARCELS"
+        description="DUTY & TAX COLLECTION FOR INBOUND BELGIAN PARCELS"
       />
 
       {/* Zonos Intelligence Bar */}
@@ -101,7 +101,7 @@ export default function DAPPage() {
         </div>
         <div className="h-4 w-px bg-bp-red/20" />
         <div className="flex items-center gap-6 text-xs text-bp-gray">
-          <span>RM-branded payment links</span>
+          <span>bpost-branded payment links</span>
           <span>Real-time duty/VAT calculation</span>
           <span>87.3% payment success rate</span>
           <span>Multi-channel notifications</span>
@@ -127,7 +127,7 @@ export default function DAPPage() {
 
       {/* Daily Collections Summary Chart */}
       <FedExSection title="Daily Collections Summary" icon={<BarChart3 className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">bpost duty/VAT collections from UK consumers on inbound DAP parcels this week.</p>
+        <p className="text-sm text-muted-foreground mb-3">bpost duty/VAT collections from Belgian consumers on inbound DAP parcels this week.</p>
         <ResponsiveContainer width="100%" height={260}>
           <BarChart data={dailyCollections}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e5e5" />
@@ -146,7 +146,7 @@ export default function DAPPage() {
 
       {/* Collection Performance by Origin */}
       <FedExSection title="Collection Performance by Origin" icon={<Globe2 className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">Payment collection rates from UK consumers by origin postal service. Low payment rates may indicate notification issues or consumer reluctance.</p>
+        <p className="text-sm text-muted-foreground mb-3">Payment collection rates from Belgian consumers by origin postal service. Low payment rates may indicate notification issues or consumer reluctance.</p>
         <FedExTable
           headers={[
             { label: "Origin Postal Service" },
@@ -177,12 +177,12 @@ export default function DAPPage() {
 
       {/* DAP Inbound Parcels */}
       <FedExSection title="Inbound DAP Parcels" icon={<Package className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">Individual inbound parcels requiring duty/VAT collection from UK recipients before final delivery.</p>
+        <p className="text-sm text-muted-foreground mb-3">Individual inbound parcels requiring duty/VAT collection from Belgian recipients before final delivery.</p>
         <FedExTable
           headers={[
             { label: "Shipment" },
             { label: "Origin Post" },
-            { label: "UK Recipient" },
+            { label: "Belgian Recipient" },
             { label: "Description" },
             { label: "Declared" },
             { label: "Total D&T" },
@@ -228,7 +228,7 @@ export default function DAPPage() {
 
       {/* Customer Notification Status */}
       <FedExSection title="Customer Notification Status" icon={<Bell className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">Notification delivery and engagement rates for today's inbound DAP parcels. RM notifies UK consumers to collect duty/VAT before release.</p>
+        <p className="text-sm text-muted-foreground mb-3">Notification delivery and engagement rates for today's inbound DAP parcels. bpostnotifies Belgian consumers to collect duty/VAT before release.</p>
         <FedExTable
           headers={[
             { label: "Channel" },
@@ -290,15 +290,15 @@ export default function DAPPage() {
       <div className="bg-bp-red/5 border border-bp-red/20 rounded-lg p-5">
         <h3 className="font-bold text-foreground mb-4 flex items-center gap-2">
           <Bell className="h-5 w-5 text-bp-red" />
-          RM DAP Collection Flow
+          bpostDAP Collection Flow
         </h3>
         <div className="flex items-center justify-between">
           {[
-            { step: "1", label: "Parcel Arrives UK", desc: "Inbound item enters RM customs processing" },
-            { step: "2", label: "D&T Assessed", desc: "RM calculates duties, VAT & handling fees" },
-            { step: "3", label: "Consumer Notified", desc: "Email/SMS/App with RM payment link sent" },
-            { step: "4", label: "Payment Collected", desc: "Consumer pays via RM online portal" },
-            { step: "5", label: "Released & Delivered", desc: "RM clears parcel for final-mile delivery" },
+            { step: "1", label: "Parcel Arrives Belgium", desc: "Inbound item enters bpost customs processing" },
+            { step: "2", label: "D&T Assessed", desc: "bpostcalculates duties, VAT & handling fees" },
+            { step: "3", label: "Consumer Notified", desc: "Email/SMS/App with bpostpayment link sent" },
+            { step: "4", label: "Payment Collected", desc: "Consumer pays via bpostonline portal" },
+            { step: "5", label: "Released & Delivered", desc: "bpostclears parcel for final-mile delivery" },
           ].map((s, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="text-center space-y-1 max-w-[130px]">
@@ -310,7 +310,7 @@ export default function DAPPage() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-muted-foreground mt-3">If payment not received within 5 days, RM sends fallback instructions. After 10 days, item is returned to origin postal service or held in RM facility.</p>
+        <p className="text-xs text-muted-foreground mt-3">If payment not received within 5 days, bpostsends fallback instructions. After 10 days, item is returned to origin postal service or held in bpostfacility.</p>
       </div>
     </div>
   );

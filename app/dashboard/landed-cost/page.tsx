@@ -129,7 +129,7 @@ export default function LandedCostPage() {
   const [quantity, setQuantity] = useState("1");
   const [weight, setWeight] = useState("");
   const [shipping, setShipping] = useState("");
-  const [shippingService, setShippingService] = useState("royal_mail.tracked");
+  const [shippingService, setShippingService] = useState("bpost.tracked");
   const [calculated, setCalculated] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -845,7 +845,7 @@ export default function LandedCostPage() {
                   >
                     <div className="pt-2 space-y-4">
                       <p className="text-xs text-muted-foreground leading-relaxed">
-                        Generate an RM-branded payment link for DAP parcels. The consumer pays duties & taxes through a secure bpost checkout experience.
+                        Generate a bpost-branded payment link for DAP parcels. The consumer pays duties & taxes through a secure bpost checkout experience.
                       </p>
 
                       <div className="bg-slate-50 border border-slate-200 rounded-sm p-3 space-y-2">
@@ -900,15 +900,15 @@ export default function LandedCostPage() {
                 </div>
                 <div className="flex-1 bg-white rounded-sm px-3 py-1 text-[10px] text-slate-500 font-mono flex items-center gap-1.5">
                   <Lock className="size-2.5 text-emerald-600" />
-                  pay.royalmail.com/customs/checkout
+                  pay.bpost.be/customs/checkout
                 </div>
               </div>
 
-              {/* RM branded header */}
+              {/* bpost branded header */}
               <div className="bg-bp-red px-6 py-4">
                 <div className="flex items-center gap-3">
                   <div className="size-10 bg-white rounded flex items-center justify-center">
-                    <span className="text-bp-red font-black text-xs">RM</span>
+                    <span className="text-bp-red font-black text-xs">BP</span>
                   </div>
                   <div>
                     <p className="text-white font-bold text-sm">bpost</p>
@@ -975,7 +975,7 @@ export default function LandedCostPage() {
                 DAP Consumer Payment Flow
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                When a DAP parcel arrives in the UK, bpost sends the consumer this payment link (powered by Zonos Collect). Once paid, the parcel is released for delivery.
+                When a DAP parcel arrives in Belgium, bpost sends the consumer this payment link (powered by Zonos Collect). Once paid, the parcel is released for delivery.
               </p>
 
               <div className="space-y-3">
@@ -984,7 +984,7 @@ export default function LandedCostPage() {
                     <Truck className="size-4 text-bp-red" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold">1. Parcel arrives at UK customs</p>
+                    <p className="text-sm font-semibold">1. Parcel arrives at Belgian customs</p>
                     <p className="text-xs text-muted-foreground">DAP shipment held pending duty & tax payment</p>
                   </div>
                 </div>
@@ -994,7 +994,7 @@ export default function LandedCostPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold">2. Payment link sent to consumer</p>
-                    <p className="text-xs text-muted-foreground">Email/SMS with RM-branded checkout page</p>
+                    <p className="text-xs text-muted-foreground">Email/SMS with bpost-branded checkout page</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

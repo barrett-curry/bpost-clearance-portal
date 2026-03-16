@@ -60,12 +60,12 @@ export default function ProfilePage() {
           <DataRow label="Division" value="Customs Operations Division" />
           <DataRow label="Operator" value="Sarah Chen" />
           <DataRow label="Role" value="Customs Operations Manager" />
-          <DataRow label="Location" value="100 Victoria Embankment, London" />
-          <DataRow label="Postcode" value="EC4Y 0HQ" />
-          <DataRow label="Phone" value="+44 (0)20 7490 2888" />
-          <DataRow label="Email" value="sarah.chen@royalmail.com" />
-          <DataRow label="EORI Number" value={<span className="font-mono">GB582119503000</span>} />
-          <DataRow label="Deferment Account" value={<span className="font-mono">RM-DEF-7721940</span>} />
+          <DataRow label="Location" value="Centre Monnaie, 1000 Brussels" />
+          <DataRow label="Postcode" value="1000" />
+          <DataRow label="Phone" value="+32 (0)2 201 2345" />
+          <DataRow label="Email" value="sarah.chen@bpost.be" />
+          <DataRow label="EORI Number" value={<span className="font-mono">BE0582119503</span>} />
+          <DataRow label="Deferment Account" value={<span className="font-mono">BP-DEF-7721940</span>} />
         </div>
       </FedExSection>
 
@@ -129,8 +129,8 @@ export default function ProfilePage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium">OFSI (UK)</p>
-                  <p className="text-xs text-muted-foreground">Office of Financial Sanctions Implementation</p>
+                  <p className="text-sm font-medium">FOD Financiën (BE)</p>
+                  <p className="text-xs text-muted-foreground">Belgian Federal Public Service Finance - Sanctions</p>
                 </div>
                 <Switch
                   checked={sanctionsSources.ofsi}
@@ -261,7 +261,7 @@ export default function ProfilePage() {
             ]}
           >
             <FedExTableRow>
-              <FedExTableCell className="font-medium">HMRC CDS</FedExTableCell>
+              <FedExTableCell className="font-medium">Belgian Customs PLDA</FedExTableCell>
               <FedExTableCell className="font-mono text-xs">api.customs.hmrc.gov.uk/declarations/v2</FedExTableCell>
               <FedExTableCell><StatusDot color="green" label="Connected" /></FedExTableCell>
               <FedExTableCell className="text-xs text-muted-foreground">2 mins ago</FedExTableCell>
@@ -292,7 +292,7 @@ export default function ProfilePage() {
             </FedExTableRow>
             <FedExTableRow even>
               <FedExTableCell className="font-medium">PAF Address Lookup</FedExTableCell>
-              <FedExTableCell className="font-mono text-xs">api.royalmail.com/paf/v2/address</FedExTableCell>
+              <FedExTableCell className="font-mono text-xs">api.bpost.be/address/v2/lookup</FedExTableCell>
               <FedExTableCell><StatusDot color="green" label="Connected" /></FedExTableCell>
               <FedExTableCell className="text-xs text-muted-foreground">5 mins ago</FedExTableCell>
             </FedExTableRow>

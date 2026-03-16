@@ -2,7 +2,7 @@
 
 import { useCallback, useSyncExternalStore } from "react";
 
-const LOCALE_KEY = "rm-portal-locale";
+const LOCALE_KEY = "bp-portal-locale";
 const DEFAULT_LOCALE = "en";
 const SUPPORTED_LOCALES = ["en", "es", "fr"] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];

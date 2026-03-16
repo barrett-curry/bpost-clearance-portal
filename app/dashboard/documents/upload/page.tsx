@@ -15,7 +15,7 @@ const ocrResult = {
   invoiceNumber: "INV-2026-0842",
   seller: {
     name: "Rosie & Jack Kidswear Ltd.",
-    address: "85 Kensington High Street, London W8 5SE, UK",
+    address: "Rue Neuve 85, 1000 Brussels, Belgium",
   },
   buyer: {
     name: "Robert Chen",

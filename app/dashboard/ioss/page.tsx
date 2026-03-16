@@ -24,11 +24,11 @@ import { Badge } from "@/components/ui/badge";
 
 const iossRegistrations = [
   { account: "ACC-10421", merchant: "Rosie & Jack Kidswear", iossNumber: "IM3720000123", status: "active", validFrom: "2024-01-01", validTo: "2024-12-31", monthlyVolume: "3,240", monthlyVAT: "€12,450", topDestination: "France" },
-  { account: "ACC-10087", merchant: "Thames Valley Electronics", iossNumber: "IM3720000456", status: "active", validFrom: "2024-02-15", validTo: "2025-02-14", monthlyVolume: "2,890", monthlyVAT: "€9,870", topDestination: "Germany" },
-  { account: "ACC-10193", merchant: "British Heritage Gifts Ltd", iossNumber: "IM3720000789", status: "active", validFrom: "2024-03-01", validTo: "2025-02-28", monthlyVolume: "1,650", monthlyVAT: "€5,230", topDestination: "Netherlands" },
-  { account: "ACC-10305", merchant: "London Fashion Direct", iossNumber: "IM3720001012", status: "active", validFrom: "2024-01-15", validTo: "2025-01-14", monthlyVolume: "1,420", monthlyVAT: "€4,680", topDestination: "Spain" },
-  { account: "ACC-10512", merchant: "UK Supplements Co", iossNumber: "IM3720001345", status: "pending", validFrom: "2024-04-01", validTo: "-", monthlyVolume: "-", monthlyVAT: "-", topDestination: "-" },
-  { account: "ACC-10098", merchant: "Cotswold Artisan Foods", iossNumber: "IM3720001678", status: "active", validFrom: "2024-01-01", validTo: "2024-12-31", monthlyVolume: "890", monthlyVAT: "€2,410", topDestination: "Belgium" },
+  { account: "ACC-10087", merchant: "Flanders Valley Electronics", iossNumber: "IM3720000456", status: "active", validFrom: "2024-02-15", validTo: "2025-02-14", monthlyVolume: "2,890", monthlyVAT: "€9,870", topDestination: "Germany" },
+  { account: "ACC-10193", merchant: "Belgian Heritage Gifts BVBA", iossNumber: "IM3720000789", status: "active", validFrom: "2024-03-01", validTo: "2025-02-28", monthlyVolume: "1,650", monthlyVAT: "€5,230", topDestination: "Netherlands" },
+  { account: "ACC-10305", merchant: "Brussels Fashion Direct", iossNumber: "IM3720001012", status: "active", validFrom: "2024-01-15", validTo: "2025-01-14", monthlyVolume: "1,420", monthlyVAT: "€4,680", topDestination: "Spain" },
+  { account: "ACC-10512", merchant: "Belgian Supplements NV", iossNumber: "IM3720001345", status: "pending", validFrom: "2024-04-01", validTo: "-", monthlyVolume: "-", monthlyVAT: "-", topDestination: "-" },
+  { account: "ACC-10098", merchant: "Ardennes Artisan Foods", iossNumber: "IM3720001678", status: "active", validFrom: "2024-01-01", validTo: "2024-12-31", monthlyVolume: "890", monthlyVAT: "€2,410", topDestination: "France" },
 ];
 
 const iossKPIs = [
@@ -40,12 +40,12 @@ const iossKPIs = [
 
 const iossShipments = [
   { id: "IOSS-001", shipmentId: "BP-2024-01001", merchant: "Rosie & Jack Kidswear", account: "ACC-10421", destination: "France", totalValue: "€120.00", vatRate: "20%", vatAmount: "€24.00", iossRef: "IM3720000123", status: "declared", invoiceMatch: true },
-  { id: "IOSS-002", shipmentId: "BP-2024-01002", merchant: "Thames Valley Electronics", account: "ACC-10087", destination: "Germany", totalValue: "€89.99", vatRate: "19%", vatAmount: "€17.10", iossRef: "IM3720000456", status: "declared", invoiceMatch: true },
-  { id: "IOSS-003", shipmentId: "BP-2024-01003", merchant: "London Fashion Direct", account: "ACC-10305", destination: "Spain", totalValue: "€145.00", vatRate: "21%", vatAmount: "€30.45", iossRef: "IM3720001012", status: "pending", invoiceMatch: false },
+  { id: "IOSS-002", shipmentId: "BP-2024-01002", merchant: "Flanders Valley Electronics", account: "ACC-10087", destination: "Germany", totalValue: "€89.99", vatRate: "19%", vatAmount: "€17.10", iossRef: "IM3720000456", status: "declared", invoiceMatch: true },
+  { id: "IOSS-003", shipmentId: "BP-2024-01003", merchant: "Brussels Fashion Direct", account: "ACC-10305", destination: "Spain", totalValue: "€145.00", vatRate: "21%", vatAmount: "€30.45", iossRef: "IM3720001012", status: "pending", invoiceMatch: false },
   { id: "IOSS-004", shipmentId: "BP-2024-01004", merchant: "British Heritage Gifts Ltd", account: "ACC-10193", destination: "Italy", totalValue: "€67.50", vatRate: "22%", vatAmount: "€14.85", iossRef: "IM3720000789", status: "declared", invoiceMatch: true },
   { id: "IOSS-005", shipmentId: "BP-2024-01005", merchant: "Rosie & Jack Kidswear", account: "ACC-10421", destination: "Netherlands", totalValue: "€149.00", vatRate: "21%", vatAmount: "€31.29", iossRef: "IM3720000123", status: "flagged", invoiceMatch: false },
   { id: "IOSS-006", shipmentId: "BP-2024-01006", merchant: "Cotswold Artisan Foods", account: "ACC-10098", destination: "Belgium", totalValue: "€95.00", vatRate: "21%", vatAmount: "€19.95", iossRef: "IM3720001678", status: "declared", invoiceMatch: true },
-  { id: "IOSS-007", shipmentId: "BP-2024-01007", merchant: "Thames Valley Electronics", account: "ACC-10087", destination: "France", totalValue: "€78.50", vatRate: "20%", vatAmount: "€15.70", iossRef: "IM3720000456", status: "declared", invoiceMatch: true },
+  { id: "IOSS-007", shipmentId: "BP-2024-01007", merchant: "Flanders Valley Electronics", account: "ACC-10087", destination: "France", totalValue: "€78.50", vatRate: "20%", vatAmount: "€15.70", iossRef: "IM3720000456", status: "declared", invoiceMatch: true },
   { id: "IOSS-008", shipmentId: "BP-2024-01008", merchant: "British Heritage Gifts Ltd", account: "ACC-10193", destination: "Ireland", totalValue: "€42.00", vatRate: "23%", vatAmount: "€9.66", iossRef: "IM3720000789", status: "declared", invoiceMatch: true },
 ];
 
@@ -71,7 +71,7 @@ export default function IOSSPage() {
     <div className="space-y-6">
       <PageHeader
         title="IOSS Intermediary Services"
-        description="MANAGING VAT COLLECTION FOR UK MERCHANTS SELLING TO EU CONSUMERS"
+        description="MANAGING VAT COLLECTION FOR BELGIAN MERCHANTS SELLING TO EU CONSUMERS"
       />
 
       {/* Zonos Intelligence Bar */}
@@ -85,7 +85,7 @@ export default function IOSSPage() {
           <span>27 EU member state VAT rates</span>
           <span>Automatic invoice validation</span>
           <span>Consolidated IOSS filing</span>
-          <span>UK scheme ready</span>
+          <span>Future scheme ready</span>
         </div>
       </div>
 
@@ -108,7 +108,7 @@ export default function IOSSPage() {
 
       {/* Merchant IOSS Registrations */}
       <FedExSection title="Merchant IOSS Registrations" icon={<Shield className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">bpost acts as IOSS intermediary for these UK merchant accounts, managing their EU VAT registration, collection, and filing obligations.</p>
+        <p className="text-sm text-muted-foreground mb-3">bpost acts as IOSS intermediary for these Belgian merchant accounts, managing their EU VAT registration, collection, and filing obligations.</p>
         <FedExTable
           headers={[
             { label: "Account" },
@@ -143,7 +143,7 @@ export default function IOSSPage() {
 
       {/* IOSS Shipments with Merchant Attribution */}
       <FedExSection title="IOSS Shipments & Invoice Validation" icon={<Receipt className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">Individual IOSS shipments across all registered merchant accounts. RM validates invoice data and files VAT on behalf of each merchant.</p>
+        <p className="text-sm text-muted-foreground mb-3">Individual IOSS shipments across all registered merchant accounts. bpostvalidates invoice data and files VAT on behalf of each merchant.</p>
         <FedExTable
           headers={[
             { label: "Shipment" },
@@ -187,7 +187,7 @@ export default function IOSSPage() {
             </FedExTableRow>
           ))}
         </FedExTable>
-        <p className="text-xs text-muted-foreground mt-2">Invoice matching validates that shipped items correspond to IOSS invoice entries. Flagged items require RM operations review before VAT filing.</p>
+        <p className="text-xs text-muted-foreground mt-2">Invoice matching validates that shipped items correspond to IOSS invoice entries. Flagged items require bpostoperations review before VAT filing.</p>
       </FedExSection>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -217,7 +217,7 @@ export default function IOSSPage() {
 
         {/* Aggregate Monthly Returns */}
         <FedExSection title="Aggregate IOSS VAT Returns" icon={<FileText className="h-5 w-5 text-bp-red" />}>
-          <p className="text-xs text-muted-foreground mb-2">RM files a single consolidated IOSS return covering all registered merchant accounts each month.</p>
+          <p className="text-xs text-muted-foreground mb-2">bpostfiles a single consolidated IOSS return covering all registered merchant accounts each month.</p>
           <div className="space-y-3">
             {monthlyReturns.map((r) => (
               <div key={r.month} className="flex items-center justify-between p-4 bg-background rounded-lg">
@@ -241,26 +241,26 @@ export default function IOSSPage() {
         </FedExSection>
       </div>
 
-      {/* UK Scheme Readiness */}
+      {/* Future Scheme Readiness */}
       <div className="bg-bp-yellow/10 border border-bp-yellow/30 rounded-lg p-5">
         <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
           <Shield className="h-5 w-5 text-bp-red" />
-          UK Low-Value Import VAT Scheme - Future Readiness
+          Low-Value Import VAT Scheme - Future Readiness
         </h3>
         <div className="grid grid-cols-3 gap-4 text-sm">
           <div className="space-y-1">
             <p className="font-medium">Architecture Ready</p>
-            <p className="text-muted-foreground">RM systems designed to support UK equivalent of IOSS when introduced</p>
+            <p className="text-muted-foreground">bpostsystems designed to support future equivalent of IOSS when introduced</p>
             <StatusDot color="green" label="Prepared" />
           </div>
           <div className="space-y-1">
             <p className="font-medium">VAT Calculation Engine</p>
-            <p className="text-muted-foreground">UK VAT rates and rules pre-configured, awaiting scheme details from HMRC</p>
+            <p className="text-muted-foreground">EU VAT rates and rules pre-configured, awaiting scheme details from Belgian Customs</p>
             <StatusDot color="green" label="Prepared" />
           </div>
           <div className="space-y-1">
             <p className="font-medium">Reporting Templates</p>
-            <p className="text-muted-foreground">RM return templates ready to be adapted for UK scheme requirements</p>
+            <p className="text-muted-foreground">bpostreturn templates ready to be adapted for Future scheme requirements</p>
             <StatusDot color="orange" label="Awaiting Spec" />
           </div>
         </div>

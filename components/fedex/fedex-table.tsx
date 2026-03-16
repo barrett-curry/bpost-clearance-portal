@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils"
 
-interface RoyalMailTableProps {
+interface BPostTableProps {
   headers: { label: React.ReactNode; className?: string }[]
   children: React.ReactNode
   className?: string
 }
 
-export function RoyalMailTable({ headers, children, className }: RoyalMailTableProps) {
+export function BPostTable({ headers, children, className }: BPostTableProps) {
   return (
     <div className={cn("w-full overflow-x-auto", className)}>
       <table className="w-full text-sm">
@@ -31,14 +31,14 @@ export function RoyalMailTable({ headers, children, className }: RoyalMailTableP
   )
 }
 
-interface RoyalMailTableRowProps {
+interface BPostTableRowProps {
   children: React.ReactNode
   className?: string
   onClick?: () => void
   even?: boolean
 }
 
-export function RoyalMailTableRow({ children, className, onClick, even }: RoyalMailTableRowProps) {
+export function BPostTableRow({ children, className, onClick, even }: BPostTableRowProps) {
   return (
     <tr
       className={cn(
@@ -53,12 +53,12 @@ export function RoyalMailTableRow({ children, className, onClick, even }: RoyalM
   )
 }
 
-interface RoyalMailTableCellProps {
+interface BPostTableCellProps {
   children: React.ReactNode
   className?: string
 }
 
-export function RoyalMailTableCell({ children, className }: RoyalMailTableCellProps) {
+export function BPostTableCell({ children, className }: BPostTableCellProps) {
   return (
     <td className={cn("py-3 px-3 text-foreground", className)}>
       {children}
@@ -67,6 +67,6 @@ export function RoyalMailTableCell({ children, className }: RoyalMailTableCellPr
 }
 
 // Backward-compatible aliases
-export const FedExTable = RoyalMailTable;
-export const FedExTableRow = RoyalMailTableRow;
-export const FedExTableCell = RoyalMailTableCell;
+export const FedExTable = BPostTable;
+export const FedExTableRow = BPostTableRow;
+export const FedExTableCell = BPostTableCell;

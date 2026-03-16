@@ -126,13 +126,13 @@ function DutyTaxCell({ shipment }: { shipment: Shipment }) {
   const taxLabel =
     countryTaxLabel[shipment.destinationCountry] ?? "Duties & Taxes";
   const amount =
-    shipment.dutyTerms === "collected_by_royal_mail" ||
+    shipment.dutyTerms === "collected_by_bpost" ||
     shipment.dutyTerms === "collected_at_checkout"
       ? shipment.dutyCollected ?? 0
       : shipment.dutyTax ?? 0;
 
   const termLabel =
-    shipment.dutyTerms === "collected_by_royal_mail"
+    shipment.dutyTerms === "collected_by_bpost"
       ? "Collection Succeeded"
       : shipment.dutyTerms === "collected_at_checkout"
         ? "Collected at Checkout"

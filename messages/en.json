@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Royal Mail Export & Customs Platform",
+    "appName": "bpost Export & Customs Platform",
     "search": "Search",
     "save": "Save",
     "cancel": "Cancel",
@@ -28,7 +28,7 @@
     "signIn": "Sign In",
     "signOut": "Sign Out",
     "language": "Language",
-    "poweredBy": "Powered by Royal Mail Group"
+    "poweredBy": "Powered by bpost group"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -96,7 +96,7 @@
     "customer": "Customer",
     "destination": "Destination",
     "clearanceReady": "Clearance Ready",
-    "shipWithFedex": "Ship with Royal Mail",
+    "shipWithFedex": "Ship with bpost",
     "orderDetail": "Order Detail",
     "landedCostBreakdown": "Landed Cost Breakdown"
   },
@@ -220,7 +220,7 @@
   "profile": {
     "title": "Business Profile",
     "companyInfo": "Company Information",
-    "fedexAccounts": "Royal Mail Account Numbers",
+    "fedexAccounts": "bpost Account Numbers",
     "taxIds": "Tax IDs by Country",
     "shippingPreferences": "Default Shipping Preferences",
     "brokerAssignment": "Customs Broker Assignment",
@@ -237,18 +237,18 @@
     "recommendations": "AI Recommendations"
   },
   "onboarding": {
-    "title": "Welcome to Royal Mail Export & Customs Platform",
+    "title": "Welcome to bpost Export & Customs Platform",
     "step1Title": "Create Your Account",
     "step1Subtitle": "Enter your email and create a password",
-    "step2Title": "Validate Royal Mail Account",
-    "step2Subtitle": "Enter your Royal Mail account number to link your shipping data",
+    "step2Title": "Validate bpost Account",
+    "step2Subtitle": "Enter your bpost account number to link your shipping data",
     "step3Title": "Business Profile",
     "step3Subtitle": "Tell us about your business for faster customs clearance",
     "step4Title": "You're All Set!",
     "step4Subtitle": "Manage all your international shipments in one place",
     "email": "Email Address",
     "password": "Password",
-    "fedexAccount": "Royal Mail Account Number",
+    "fedexAccount": "bpost Account Number",
     "accountValidated": "Account validated successfully",
     "companyName": "Company Name",
     "taxId": "Tax ID (EIN)",
@@ -260,10 +260,10 @@
     "valueConfirmed": "Value Confirmed"
   },
   "login": {
-    "title": "Sign in to Royal Mail Export & Customs Platform",
+    "title": "Sign in to bpost Export & Customs Platform",
     "email": "Email address",
     "password": "Password",
-    "signInFedex": "Sign in with Royal Mail ID",
+    "signInFedex": "Sign in with bpost ID",
     "forgotPassword": "Forgot password?",
     "noAccount": "Don't have an account?",
     "createAccount": "Create account"

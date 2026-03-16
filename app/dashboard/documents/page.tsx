@@ -173,7 +173,7 @@ function getDocTemplate(doc: DocItem): DocFieldTemplate {
         { name: "applicantName", label: "Applicant", defaultValue: demoCompany.name },
         { name: "productCategory", label: "Product Category", defaultValue: "Children's Clothing & Textiles" },
         { name: "standardReference", label: "Standard / Regulation Reference", defaultValue: doc.countryCode === "MX" ? "NOM-004-SCFI-2006" : doc.countryCode === "JP" ? "JIS L 1930 (Textile Testing)" : "EU Reg. 1007/2011 (Textile Labelling)" },
-        { name: "testingLab", label: "Accredited Testing Laboratory", defaultValue: "SGS Group - London" },
+        { name: "testingLab", label: "Accredited Testing Laboratory", defaultValue: "SGS Group - Brussels" },
         { name: "sampleCount", label: "Number of Samples Submitted", defaultValue: "6" },
         { name: "certificationScope", label: "Scope of Certification", defaultValue: "Product composition, labeling, and safety compliance" },
       ],
@@ -190,7 +190,7 @@ function getDocTemplate(doc: DocItem): DocFieldTemplate {
         { name: "guarantorAddress", label: "Registered Address", defaultValue: `${demoCompany.address}, ${demoCompany.city}, ${demoCompany.postcode}` },
         { name: "guaranteeAmount", label: "Guarantee Amount", defaultValue: "\u20AC50,000.00" },
         { name: "bankName", label: "Issuing Bank / Surety", defaultValue: "Barclays Corporate Banking" },
-        { name: "accountRef", label: "Account Reference", defaultValue: "BARC-UK-2024-08891" },
+        { name: "accountRef", label: "Account Reference", defaultValue: "BARC-BE-2024-08891" },
         { name: "validityPeriod", label: "Validity Period", defaultValue: "12 months from date of issue" },
       ],
     };
@@ -218,7 +218,7 @@ function getDocTemplate(doc: DocItem): DocFieldTemplate {
   if (doc.type.includes("Excise")) {
     return {
       ...base,
-      issuingAuthority: "HMRC / EU Excise Authority",
+      issuingAuthority: "Belgian Customs / EU Excise Authority",
       fields: [
         { name: "consignorName", label: "Consignor", defaultValue: demoCompany.name },
         { name: "exciseId", label: "Excise ID / Warehouse Number", defaultValue: "GBWK000012345" },
@@ -234,7 +234,7 @@ function getDocTemplate(doc: DocItem): DocFieldTemplate {
   if (doc.type.includes("Export")) {
     return {
       ...base,
-      issuingAuthority: "HM Revenue & Customs (HMRC)",
+      issuingAuthority: "Belgian Customs & Excise",
       fields: [
         { name: "exporterName", label: "Exporter Name", defaultValue: demoCompany.name },
         { name: "eori", label: "EORI Number", defaultValue: demoCompany.eori },
@@ -280,7 +280,7 @@ function PrepareDocDialog({
 
   const template = getDocTemplate(doc);
   const today = new Date().toISOString().split("T")[0];
-  const refNumber = `RM-${doc.countryCode ?? "XX"}-${Date.now().toString(36).toUpperCase().slice(-6)}`;
+  const refNumber = `BP-${doc.countryCode ?? "XX"}-${Date.now().toString(36).toUpperCase().slice(-6)}`;
 
   // Initialize form data from template defaults
   const getFieldValue = (name: string) => {

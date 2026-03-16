@@ -24,7 +24,7 @@ const channelLabel: Record<string, string> = {
 const dutyTermsLabel: Record<string, string> = {
   collected_at_checkout: "Collected at Checkout (DDP)",
   collect_upon_delivery: "Collect Upon Delivery (DAP)",
-  collected_by_royal_mail: "Collected by bpost (DDP)",
+  collected_by_bpost: "Collected by bpost (DDP)",
 };
 
 export default function OrderDetailPage({
@@ -63,7 +63,7 @@ export default function OrderDetailPage({
       />
 
       {/* Collected by bpost - Ready to Ship Banner */}
-      {order.dutyTerms === "collected_by_royal_mail" && order.collectNotice && (
+      {order.dutyTerms === "collected_by_bpost" && order.collectNotice && (
         <div className="flex items-start gap-3 rounded-lg border-2 border-bp-green/40 bg-green-50 px-5 py-4 dark:bg-green-950/20">
           <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-bp-green" />
           <div className="space-y-1">
@@ -127,7 +127,7 @@ export default function OrderDetailPage({
             />
           </div>
           <div>
-            {order.dutyTerms === "collected_by_royal_mail" ? (
+            {order.dutyTerms === "collected_by_bpost" ? (
               <div className="flex items-center gap-1.5">
                 <CheckCircle className="h-4 w-4 text-bp-green" />
                 <span className="text-sm font-medium text-bp-green">
@@ -154,7 +154,7 @@ export default function OrderDetailPage({
       </FedExSection>
 
       {/* Collection Notice Status */}
-      {(order.status === "duty-hold" || order.dutyTerms === "collected_by_royal_mail") && order.collectNotice && (
+      {(order.status === "duty-hold" || order.dutyTerms === "collected_by_bpost") && order.collectNotice && (
         <FedExSection title="Collection Notice Status" variant="static">
           <div className="pt-4 space-y-4">
             <div className="flex items-center gap-3">
@@ -168,7 +168,7 @@ export default function OrderDetailPage({
                 </p>
               </div>
             </div>
-            {order.dutyTerms === "collected_by_royal_mail" ? (
+            {order.dutyTerms === "collected_by_bpost" ? (
               <>
                 <div className="flex items-center gap-3">
                   <div className="flex h-8 w-8 items-center justify-center rounded-full bg-bp-green/10">

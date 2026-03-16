@@ -60,9 +60,9 @@ export default function OrdersPage() {
 
   const dutyHoldCount = orders.filter((o) => o.status === "duty-hold").length;
 
-  // Sort: collected_by_royal_mail (ready to ship) first, then duty-hold, then collect_upon_delivery, then collected_at_checkout
+  // Sort: collected_by_bpost (ready to ship) first, then duty-hold, then collect_upon_delivery, then collected_at_checkout
   const dutyTermsOrder: Record<string, number> = {
-    collected_by_royal_mail: 0,
+    collected_by_bpost: 0,
     "duty-hold": 1,
     collect_upon_delivery: 2,
     collected_at_checkout: 3,
@@ -162,11 +162,11 @@ export default function OrdersPage() {
               <FedExTableCell>
                 {(() => {
                   const taxLabel = countryTaxLabel[order.customerCountry] ?? "Duties & Taxes";
-                  const amount = order.dutyTerms === "collected_by_royal_mail" || order.dutyTerms === "collected_at_checkout"
+                  const amount = order.dutyTerms === "collected_by_bpost" || order.dutyTerms === "collected_at_checkout"
                     ? order.dutyCollected ?? 0
                     : order.dutyTax ?? 0;
 
-                  if (order.dutyTerms === "collected_by_royal_mail") {
+                  if (order.dutyTerms === "collected_by_bpost") {
                     return (
                       <div>
                         <span className="inline-flex items-center gap-1.5 text-sm font-medium text-bp-green">
@@ -217,7 +217,7 @@ export default function OrdersPage() {
 
               {/* Next Step column */}
               <FedExTableCell>
-                {order.dutyTerms === "collected_by_royal_mail" || order.dutyTerms === "collected_at_checkout" ? (
+                {order.dutyTerms === "collected_by_bpost" || order.dutyTerms === "collected_at_checkout" ? (
                   <span className="inline-flex items-center gap-1.5 text-sm font-medium text-bp-green">
                     <CheckCircle className="h-4 w-4" />
                     Ready to Ship

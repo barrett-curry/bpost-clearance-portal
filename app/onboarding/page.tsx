@@ -22,7 +22,7 @@ export default function OnboardingPage() {
   const [step, setStep] = useState(0);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [rmAccount, setRmAccount] = useState("");
+  const [bpAccount, setBpAccount] = useState("");
   const [validated, setValidated] = useState(false);
   const [validating, setValidating] = useState(false);
 
@@ -143,14 +143,14 @@ export default function OnboardingPage() {
               </div>
               <div className="px-6 pb-6 space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="rm-acct">bpost Account Number</Label>
+                  <Label htmlFor="bp-acct">bpost Account Number</Label>
                   <div className="flex gap-2">
                     <Input
-                      id="rm-acct"
-                      placeholder="e.g. RM-2024-ACCT-001"
-                      value={rmAccount}
+                      id="bp-acct"
+                      placeholder="e.g. BP-2024-ACCT-001"
+                      value={bpAccount}
                       onChange={(e) => {
-                        setRmAccount(e.target.value);
+                        setBpAccount(e.target.value);
                         setValidated(false);
                       }}
                       className="rounded-sm"
@@ -296,7 +296,7 @@ export default function OnboardingPage() {
               <div className="px-6 pb-8 space-y-4">
                 <div className="rounded-sm bg-bp-light p-4 space-y-1">
                   <DataRow label="Company" value={demoCompany.name} />
-                  <DataRow label="bpost Account" value={demoCompany.rmAccount} />
+                  <DataRow label="bpost Account" value={demoCompany.bpostAccount} />
                   <DataRow
                     label="Location"
                     value={`${demoCompany.city}, ${demoCompany.country}`}

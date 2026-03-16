@@ -67,11 +67,11 @@ const recentSettlements = [
 
 const topPDDPCustomers = [
   { account: "ACC-10421", name: "Rosie & Jack Kidswear", monthlyVolume: 3240, pddpValue: "€42,180", topDestination: "France", trend: "+12%" },
-  { account: "ACC-10087", name: "Thames Valley Electronics", monthlyVolume: 2890, pddpValue: "€38,650", topDestination: "Germany", trend: "+8%" },
-  { account: "ACC-10193", name: "British Heritage Gifts Ltd", monthlyVolume: 1975, pddpValue: "€21,340", topDestination: "Netherlands", trend: "+15%" },
-  { account: "ACC-10305", name: "London Fashion Direct", monthlyVolume: 1640, pddpValue: "€19,870", topDestination: "Spain", trend: "+3%" },
-  { account: "ACC-10512", name: "UK Supplements Co", monthlyVolume: 1120, pddpValue: "€12,450", topDestination: "Belgium", trend: "-2%" },
-  { account: "ACC-10098", name: "Cotswold Artisan Foods", monthlyVolume: 890, pddpValue: "€8,210", topDestination: "Ireland", trend: "+22%" },
+  { account: "ACC-10087", name: "Flanders Valley Electronics", monthlyVolume: 2890, pddpValue: "€38,650", topDestination: "Germany", trend: "+8%" },
+  { account: "ACC-10193", name: "Belgian Heritage Gifts BVBA", monthlyVolume: 1975, pddpValue: "€21,340", topDestination: "Netherlands", trend: "+15%" },
+  { account: "ACC-10305", name: "Brussels Fashion Direct", monthlyVolume: 1640, pddpValue: "€19,870", topDestination: "Spain", trend: "+3%" },
+  { account: "ACC-10512", name: "Belgian Supplements NV", monthlyVolume: 1120, pddpValue: "€12,450", topDestination: "France", trend: "-2%" },
+  { account: "ACC-10098", name: "Ardennes Artisan Foods", monthlyVolume: 890, pddpValue: "€8,210", topDestination: "Ireland", trend: "+22%" },
 ];
 
 export default function PDDPPage() {
@@ -96,13 +96,13 @@ export default function PDDPPage() {
         </div>
       </div>
 
-      {/* RM-to-Partner Settlement Summary KPIs */}
+      {/* bpost-to-Partner Settlement Summary KPIs */}
       <div className="grid grid-cols-5 gap-4">
         {[
           { label: "Total Duties Collected", value: settlementSummary.totalDutiesThisMonth, icon: Banknote, sub: "From merchant accounts this month" },
-          { label: "Settled with Partners", value: settlementSummary.totalSettledWithPartners, icon: CheckCircle2, sub: "RM → EU postal partner payments" },
+          { label: "Settled with Partners", value: settlementSummary.totalSettledWithPartners, icon: CheckCircle2, sub: "bpost→ EU postal partner payments" },
           { label: "Pending Partner Settlement", value: settlementSummary.pendingPartnerSettlement, icon: Clock, sub: "Awaiting transfer to partners" },
-          { label: "Avg Settlement Cycle", value: settlementSummary.avgSettlementDays, icon: ArrowRightLeft, sub: "RM to partner post" },
+          { label: "Avg Settlement Cycle", value: settlementSummary.avgSettlementDays, icon: ArrowRightLeft, sub: "bpostto partner post" },
           { label: "Next Settlement Run", value: settlementSummary.nextSettlementDate, icon: RefreshCw, sub: "Scheduled batch transfer" },
         ].map((kpi) => {
           const Icon = kpi.icon;
@@ -121,7 +121,7 @@ export default function PDDPPage() {
 
       {/* Partner Posts Table */}
       <FedExSection title="EU Postal Partner Network" icon={<Handshake className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">bpost partner post agreements for PDDP duty/VAT settlement. RM collects from UK merchants at checkout and settles with each destination postal operator.</p>
+        <p className="text-sm text-muted-foreground mb-3">bpost partner post agreements for PDDP duty/VAT settlement. bpostcollects from Belgian merchants at checkout and settles with each destination postal operator.</p>
         <FedExTable
           headers={[
             { label: "Country" },
@@ -129,7 +129,7 @@ export default function PDDPPage() {
             { label: "Status" },
             { label: "Volume (Month)" },
             { label: "Duties Collected" },
-            { label: "RM Settlement" },
+            { label: "bpostSettlement" },
             { label: "Last Settlement" },
             { label: "VAT Scheme" },
           ]}
@@ -155,7 +155,7 @@ export default function PDDPPage() {
                 {partner.settlementStatus !== "n/a" ? (
                   <StatusDot
                     color={partner.settlementStatus === "settled" ? "green" : "orange"}
-                    label={partner.settlementStatus === "settled" ? "RM Settled" : "RM Pending"}
+                    label={partner.settlementStatus === "settled" ? "bpostSettled" : "bpostPending"}
                   />
                 ) : (
                   <span className="text-muted-foreground">-</span>
@@ -170,7 +170,7 @@ export default function PDDPPage() {
 
       {/* Top Customers Using PDDP */}
       <FedExSection title="Top Customers Using PDDP" icon={<Users className="h-5 w-5 text-bp-red" />}>
-        <p className="text-sm text-muted-foreground mb-3">Merchant accounts with highest PDDP shipment volumes this month. RM collects duty/VAT from these accounts at checkout and settles with EU partner posts.</p>
+        <p className="text-sm text-muted-foreground mb-3">Merchant accounts with highest PDDP shipment volumes this month. bpostcollects duty/VAT from these accounts at checkout and settles with EU partner posts.</p>
         <FedExTable
           headers={[
             { label: "Account" },
@@ -213,8 +213,8 @@ export default function PDDPPage() {
           </ResponsiveContainer>
         </FedExSection>
 
-        {/* Recent RM-to-Partner Settlements */}
-        <FedExSection title="Recent RM → Partner Settlements" icon={<ArrowRightLeft className="h-5 w-5 text-bp-red" />}>
+        {/* Recent bpost-to-Partner Settlements */}
+        <FedExSection title="Recent bpost→ Partner Settlements" icon={<ArrowRightLeft className="h-5 w-5 text-bp-red" />}>
           <p className="text-xs text-muted-foreground mb-2">bpost settlement transfers to EU postal partners for pre-paid duty/VAT on behalf of merchant accounts.</p>
           <div className="space-y-2">
             {recentSettlements.map((s) => (
@@ -224,7 +224,7 @@ export default function PDDPPage() {
                     <span className="text-sm font-medium">{s.partner}</span>
                     <StatusDot
                       color={s.status === "settled" ? "green" : "orange"}
-                      label={s.status === "settled" ? "RM Settled" : "RM Pending"}
+                      label={s.status === "settled" ? "bpostSettled" : "bpostPending"}
                     />
                   </div>
                   <p className="text-xs text-muted-foreground">Ref: {s.reference}</p>
@@ -247,11 +247,11 @@ export default function PDDPPage() {
         </h3>
         <div className="flex items-center justify-between">
           {[
-            { step: "1", label: "Merchant Checkout", desc: "RM collects duty/VAT from merchant's customer" },
-            { step: "2", label: "Pre-advice Sent", desc: "RM transmits PDDP flag to partner post" },
+            { step: "1", label: "Merchant Checkout", desc: "bpostcollects duty/VAT from merchant's customer" },
+            { step: "2", label: "Pre-advice Sent", desc: "bposttransmits PDDP flag to partner post" },
             { step: "3", label: "Export Dispatch", desc: "CN23 with DDP terms generated by RM" },
-            { step: "4", label: "Partner Receipt", desc: "EU post clears parcel using RM pre-paid data" },
-            { step: "5", label: "RM Settlement", desc: "RM transfers collected D&T to partner post" },
+            { step: "4", label: "Partner Receipt", desc: "EU post clears parcel using bpostpre-paid data" },
+            { step: "5", label: "bpostSettlement", desc: "bposttransfers collected D&T to partner post" },
           ].map((s, i) => (
             <div key={i} className="flex items-center gap-3">
               <div className="text-center space-y-1 max-w-[140px]">

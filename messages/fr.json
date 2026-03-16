@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Plateforme Export & Douanes Royal Mail",
+    "appName": "Plateforme Export & Douanes bpost",
     "search": "Rechercher",
     "save": "Enregistrer",
     "cancel": "Annuler",
@@ -28,7 +28,7 @@
     "signIn": "Se Connecter",
     "signOut": "Se Déconnecter",
     "language": "Langue",
-    "poweredBy": "Propulsé par Royal Mail Group"
+    "poweredBy": "Propulsé par bpost Group"
   },
   "nav": {
     "dashboard": "Tableau de Bord",
@@ -96,7 +96,7 @@
     "customer": "Client",
     "destination": "Destination",
     "clearanceReady": "Prêt pour Dédouanement",
-    "shipWithFedex": "Expédier avec Royal Mail",
+    "shipWithFedex": "Expédier avec bpost",
     "orderDetail": "Détail Commande",
     "landedCostBreakdown": "Détail Coût Rendu"
   },
@@ -220,7 +220,7 @@
   "profile": {
     "title": "Profil Entreprise",
     "companyInfo": "Informations Entreprise",
-    "fedexAccounts": "Numéros de Compte Royal Mail",
+    "fedexAccounts": "Numéros de Compte bpost",
     "taxIds": "IDs Fiscaux par Pays",
     "shippingPreferences": "Préférences d'Expédition",
     "brokerAssignment": "Attribution Courtier Douanier",
@@ -237,18 +237,18 @@
     "recommendations": "Recommandations IA"
   },
   "onboarding": {
-    "title": "Bienvenue sur la Plateforme Export & Douanes Royal Mail",
+    "title": "Bienvenue sur la Plateforme Export & Douanes bpost",
     "step1Title": "Créez Votre Compte",
     "step1Subtitle": "Entrez votre email et créez un mot de passe",
-    "step2Title": "Validez Votre Compte Royal Mail",
-    "step2Subtitle": "Entrez votre numéro de compte Royal Mail pour lier vos données",
+    "step2Title": "Validez Votre Compte bpost",
+    "step2Subtitle": "Entrez votre numéro de compte bpost pour lier vos données",
     "step3Title": "Profil Entreprise",
     "step3Subtitle": "Parlez-nous de votre entreprise pour un dédouanement plus rapide",
     "step4Title": "Tout est Prêt !",
     "step4Subtitle": "Gérez toutes vos expéditions internationales en un seul endroit",
     "email": "Adresse Email",
     "password": "Mot de Passe",
-    "fedexAccount": "Numéro de Compte Royal Mail",
+    "fedexAccount": "Numéro de Compte bpost",
     "accountValidated": "Compte validé avec succès",
     "companyName": "Nom de l'Entreprise",
     "taxId": "ID Fiscal (EIN)",
@@ -263,7 +263,7 @@
     "title": "Connexion au Portail de Dédouanement",
     "email": "Adresse email",
     "password": "Mot de passe",
-    "signInFedex": "Se connecter avec l'ID Royal Mail",
+    "signInFedex": "Se connecter avec l'ID bpost",
     "forgotPassword": "Mot de passe oublié ?",
     "noAccount": "Pas encore de compte ?",
     "createAccount": "Créer un compte"
