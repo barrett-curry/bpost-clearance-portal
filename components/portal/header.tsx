@@ -22,7 +22,7 @@ export function PortalHeader() {
         <div className="flex items-center gap-6">
           <Link href={isLoggedIn ? "/dashboard" : "/"} className="flex items-center gap-2.5">
             <Image
-              src="/bpost-logo.svg"
+              src="/bpost-logo.png"
               alt="bpost"
               width={56}
               height={38}

@@ -36,7 +36,7 @@ All static data lives in `lib/fake-data.ts`. The demo company is "Rosie & Jack K
 The platform demonstrates all Must Have and Should Have requirements from the bpost RFP:
 
 ### Account Customer Services
-- Branded tooling with RM branding, white-label support
+- Branded tooling with bpost branding, white-label support
 - Data quality tools (HS classification, address validation, PAF integration)
 - Account dashboards with shipment status, customs progress, exceptions
 
@@ -58,7 +58,7 @@ The platform demonstrates all Must Have and Should Have requirements from the bp
 
 ### PDDP Services
 - EU postal partner integration for duty/VAT pre-payment
-- Funds settlement between RMG and partner posts
+- Funds settlement between bpost Group and partner posts
 
 ### DAP Import Solution
 - Lane-specific DAP estimation via API
