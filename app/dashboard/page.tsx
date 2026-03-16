@@ -241,7 +241,7 @@ export default function DashboardPage() {
       <div className="flex items-start justify-between">
         <PageHeader
           title="Operations Dashboard"
-          description="REAL-TIME OVERVIEW OF ROYAL MAIL CUSTOMS CLEARANCE OPERATIONS"
+          description="REAL-TIME OVERVIEW OF BPOST CUSTOMS CLEARANCE OPERATIONS"
         />
         <div className="bg-card border border-border rounded-lg shadow-sm overflow-hidden">
           <div className="h-1.5 bg-bp-red" />
